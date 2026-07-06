@@ -68,6 +68,7 @@
 </head>
 <body>
 
+    <!-- Nawigacja -->
     <nav class="navbar">
         <div class="logo-nav">Hyper<span>OPT</span></div>
         <div class="nav-links">
@@ -78,12 +79,14 @@
         </div>
     </nav>
 
+    <!-- Strona Główna / Hero -->
     <div class="hero" id="home">
         <h1>Wyciskamy <span>MAX FPS</span> z Twojego PC</h1>
         <p>Liderzy profesjonalnej optymalizacji sprzętu i oprogramowania. Zmniejszamy input lag, obniżamy temperatury i gwarantujemy płynną rozgrywkę w każdej grze.</p>
         <button class="btn-big" onclick="document.getElementById('zamowienie').scrollIntoView()">Złóż zamówienie</button>
     </div>
 
+    <!-- Opinie -->
     <div class="section">
         <div class="section-title">Opinie zadowolonych klientów (21)</div>
         <div class="reviews">
@@ -102,36 +105,62 @@
         </div>
     </div>
 
+    <!-- Pakiety -->
     <div class="section" id="pakiety">
         <div class="section-title">Nasze Pakiety</div>
         <div class="grid-3">
             <div class="pkg-card">
                 <h3>Pakiet Standard</h3>
-                <div class="pkg-price">25 PLN</div>
+                <div class="pkg-price">20 PLN</div>
                 <div class="pkg-desc">Wraz z nim otrzymujesz podstawową optymalizacje usunięcia telemetri windows czyszczenie plików temp i ogólne przyspieszenie systemu windows.</div>
             </div>
             <div class="pkg-card">
                 <h3>Pakiet Pro</h3>
-                <div class="pkg-price">40 PLN</div>
+                <div class="pkg-price">30 PLN</div>
                 <div class="pkg-desc">Otrzymujesz z tym pakietem cały pakiet standard Otrzymujesz specjalne ustawienia wiatraków komputera karty graficznej i procesora + darmowy dodatek optymalizacja pod kątem gier w które grasz.</div>
             </div>
             <div class="pkg-card">
                 <h3>Pakiet Expert</h3>
-                <div class="pkg-price">80 PLN</div>
+                <div class="pkg-price">60 PLN</div>
                 <div class="pkg-desc">Wraz zakupem tego pakietu otrzymujesz pakiet pro i standart do tego pakietu otrzymujesz dodatkowo ustawienia do undervoltingu karty graficznej rozszerzona optymalizacja win10 / win11 + dodatkowo za darmo otrzymujesz aktualizacje sterowników podkręcenie ram i naprawienie twojego dowolnego problemu.</div>
             </div>
         </div>
     </div>
 
+    <!-- Dodatki -->
     <div class="section">
         <div class="section-title">Opcjonalne Dodatki do pakietu</div>
         <div class="grid-3">
-            <div class="addon-box"><b>35 PLN</b>Zaawansowana optymalizacja BIOS</div>
-            <div class="addon-box"><b>20 PLN</b>Zainstalowanie z pomocą informatyka systemu który podwyższy FPS i zmniejszy nie potrzebne procesy</div>
-            <div class="addon-box"><b>20 PLN</b>Format komputera i zrobienie głebokiej optymalizacji + wybrany pakiet</div>
+            <div class="addon-box"><b>25 PLN</b>Zaawansowana optymalizacja BIOS</div>
+            <div class="addon-box"><b>10 PLN</b>Zainstalowanie z pomocą informatyka systemu który podwyższy FPS i zmniejszy nie potrzebne procesy</div>
+            <div class="addon-box"><b>10 PLN</b>Format komputera i zrobienie głebokiej optymalizacji + wybrany pakiet</div>
+            
+            <div class="addon-box" style="width: 100%; max-width: 620px; text-align: left;">
+                <b style="text-align: center;">10 PLN</b> 
+                <div style="text-align: center; margin-bottom: 10px;">Zależnie od Twoich preferencji otrzymujesz plik, który wykona za ciebie czyszczenie komputera z telemetrii lub pomoc informatyka.</div>
+                <details style="cursor: pointer; background: rgba(0,0,0,0.3); padding: 10px; border-radius: 5px; border: 1px solid #333;">
+                    <summary style="color: var(--acc); font-weight: bold; outline: none; padding: 5px;">Co jest dokładnie czyszczone? (Kliknij, aby rozwinąć)</summary>
+                    <ul style="margin-top: 10px; margin-left: 20px; line-height: 1.6; color: #ccc;">
+                        <li>Czyszczenie plików tymczasowych i cache.</li>
+                        <li>Usuwanie zbędnych programów (za zgodą klienta).</li>
+                        <li>Wyłączenie niepotrzebnych programów uruchamianych przy starcie systemu.</li>
+                        <li>Aktualizacja systemu Windows i sterowników (jeśli klient chce).</li>
+                        <li>Sprawdzenie kondycji dysku i podstawowa diagnostyka.</li>
+                        <li>Skanowanie pod kątem złośliwego oprogramowania.</li>
+                        <li>Zwolnienie miejsca na dysku.</li>
+                        <li>Optymalizacja ustawień zasilania pod wydajność.</li>
+                        <li>Czyszczenie przeglądarek (cache, niepotrzebne rozszerzenia – za zgodą klienta).</li>
+                        <li>Sprawdzenie temperatur podzespołów.</li>
+                        <li>Weryfikacja ilości wolnej pamięci RAM podczas pracy.</li>
+                        <li>Usunięcie zbędnych wpisów z autostartu.</li>
+                        <li>Raport z wykonanych zmian.</li>
+                    </ul>
+                </details>
+            </div>
         </div>
     </div>
 
+    <!-- Formularz Zamówienia -->
     <div class="section" id="zamowienie">
         <div class="section-title">Złóż Zamówienie</div>
         <div class="form-container">
@@ -140,22 +169,24 @@
                 <input type="text" id="specs" placeholder="Podaj sprzęt (np. i5-11400F, RTX 3060, 16GB RAM)" required>
                 
                 <select id="package" onchange="calc()">
-                    <option value="25" data-name="Pakiet Standard">Pakiet Standard - 25 PLN</option>
-                    <option value="40" data-name="Pakiet Pro">Pakiet Pro - 40 PLN</option>
-                    <option value="80" data-name="Pakiet Expert">Pakiet Expert - 80 PLN</option>
+                    <option value="20" data-name="Pakiet Standard">Pakiet Standard - 20 PLN</option>
+                    <option value="30" data-name="Pakiet Pro">Pakiet Pro - 30 PLN</option>
+                    <option value="60" data-name="Pakiet Expert">Pakiet Expert - 60 PLN</option>
                 </select>
 
                 <div style="margin-bottom: 10px; color: var(--mut); font-size: 14px; text-transform: uppercase; font-weight: bold;">Wybierz dodatki:</div>
-                <label class="check-row"><input type="checkbox" class="addon" value="35" data-name="Zaawansowana optymalizacja BIOS" onchange="calc()"> Zaawansowana optymalizacja BIOS (+35 PLN)</label>
-                <label class="check-row"><input type="checkbox" class="addon" value="20" data-name="Instalacja systemu FPS Boost" onchange="calc()"> System podwyższający FPS (+20 PLN)</label>
-                <label class="check-row"><input type="checkbox" class="addon" value="20" data-name="Format + Głęboka optymalizacja" onchange="calc()"> Format + Głęboka optymalizacja (+20 PLN)</label>
+                <label class="check-row"><input type="checkbox" class="addon" value="25" data-name="Zaawansowana optymalizacja BIOS" onchange="calc()"> Zaawansowana optymalizacja BIOS (+25 PLN)</label>
+                <label class="check-row"><input type="checkbox" class="addon" value="10" data-name="Instalacja systemu FPS Boost" onchange="calc()"> System podwyższający FPS (+10 PLN)</label>
+                <label class="check-row"><input type="checkbox" class="addon" value="10" data-name="Format + Głęboka optymalizacja" onchange="calc()"> Format + Głęboka optymalizacja (+10 PLN)</label>
+                <label class="check-row"><input type="checkbox" class="addon" value="10" data-name="Skrypt czyszczący / Pomoc informatyka" onchange="calc()"> Skrypt czyszczący z telemetrii / Pomoc (+10 PLN)</label>
 
-                <div class="total">RAZEM: <span id="totalPrice">25 PLN</span></div>
+                <div class="total">RAZEM: <span id="totalPrice">20 PLN</span></div>
                 <button type="submit" class="btn-submit">Generuj kod i złóż zamówienie</button>
             </form>
         </div>
     </div>
 
+    <!-- Wyskakujące okienko (Modal) generujące kod -->
     <div id="successModal" class="modal-overlay">
         <div class="modal-content">
             <h2>Sukces!</h2>
